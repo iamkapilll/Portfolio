@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myportfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kapil Dev Chaudhary | Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #0a192f;
+      --secondary-color: #64ffda;
+      --text-color: #ccd6f6;
+      --muted-color: #8892b0;
+      --bg-color: #112240;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--bg-color);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--secondary-color);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 5px 0;
+      color: var(--muted-color);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+      background-color: #0a192f;
+    }
+
+    nav a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--secondary-color);
+      padding-bottom: 5px;
+    }
+
+    .project, .skill {
+      background-color: #1c2e4a;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 3px solid var(--secondary-color);
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: var(--muted-color);
+      border-top: 1px solid var(--secondary-color);
+      background-color: var(--bg-color);
+    }
+
+    .contact-btn {
+      background-color: var(--secondary-color);
+      border: none;
+      padding: 10px 20px;
+      color: var(--primary-color);
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    .contact-btn:hover {
+      background-color: #52e0c4;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>i am kapil dev</h1>
+
+  <header>
+    <h1>Kapil Dev Chaudhary</h1>
+    <p>Student | Web Developer | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Kapil, a passionate and dedicated web developer with a focus on MERN stack technologies. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Student Course Enrollment System</h3>
+      <p>Built with Node.js, Express, and MongoDB. Allows students to enroll in courses and manage academic records.</p>
+    </div>
+    <div class="project">
+      <h3>Prison Management System</h3>
+      <p>A management system designed for prison operations, handling inmate data and system processes efficiently.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">HTML, CSS, JavaScript</div>
+    <div class="skill">React, Node.js, Express.js</div>
+    <div class="skill">MongoDB, Git & GitHub</div>
+    <div class="skill">Basic Linux, REST APIs</div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, feel free to email me:</p>
+    <p><strong>kapildevchaudhary067@gmail.com</strong></p>
+    <button class="contact-btn" onclick="handleContact()">Say Hello</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Kapil Dev Chaudhary. All rights reserved.
+  </footer>
+
+  <script>
+    function handleContact() {
+      window.location.href = "mailto:kapildevchaudhary067@gmail.com";
+    }
+  </script>
+
 </body>
 </html>
